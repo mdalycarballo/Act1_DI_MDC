@@ -30,7 +30,7 @@ class Ejercicio1Activity : AppCompatActivity() {
 
             // Si el usuario no escribe el protocolo, lo añadimos
             if (urlText.isNotEmpty() && !urlText.startsWith("http://") && !urlText.startsWith("https://")) {
-                urlText = "https://$urlText"
+                urlText = "https://$urlText.com"
             }
 
             // Comprueba que no esté vacío y que sea una URL válida[cite: 1]
