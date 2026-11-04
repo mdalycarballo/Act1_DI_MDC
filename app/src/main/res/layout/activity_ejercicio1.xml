@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!-- Contenido principal del Ejercicio 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduzca una dirección URL:"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="https://www.google.com"
+            android:inputType="textUri"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnAbrirUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Abrir enlace" />
+
+    </LinearLayout>
+
+    <!-- Botón flotante para ir atrás (abajo a la derecha) -->
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Atras"/>
+
+</RelativeLayout>
