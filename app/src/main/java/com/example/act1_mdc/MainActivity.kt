@@ -17,11 +17,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Ejercicio1Activity::class.java)
             startActivity(intent)
         }
+
         btnEj2.setOnClickListener {
-            val intent = Intent(this, Ejercicio2_1Activity::class.java)
+            val intent = Intent(this, Ejercicio2Activity::class.java)
             startActivity(intent)
         }
-
-
     }
 }

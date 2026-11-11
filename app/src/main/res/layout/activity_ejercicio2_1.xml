@@ -9,23 +9,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:gravity="center"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 2: Navegación Retrasada"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pulsa el botón para iniciar la espera de 10 segundos"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnNavegarRetrasado"
             android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:text="Next page" />
+            android:layout_height="wrap_content"
+            android:text="Ir a Pantalla 2 (10 Segundos)" />
+
     </LinearLayout>
 
-    <!-- boton volver atras -->
-<Button
-android:id="@+id/btnAtras"
-android:layout_width="90dp"
-android:layout_height="50dp"
-android:layout_alignParentBottom="true"
-android:layout_alignParentEnd="true"
-android:text="Atras"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Volver al menú"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
 </RelativeLayout>

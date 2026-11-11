@@ -11,41 +11,44 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class Ejercicio2_1Activity : AppCompatActivity() {
+class Ejercicio2Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ejercicio2_1)
 
-        val btnNavegar = findViewById<Button>(R.id.button)
-        val fabVolver = findViewById<Button>(R.id.btnAtras)
+        val btnNavegar = findViewById<Button>(R.id.btnNavegarRetrasado)
+        val tvEstado = findViewById<TextView>(R.id.tvEstado)
+        val fabVolver = findViewById<FloatingActionButton>(R.id.fabVolver)
 
-        // Botón flotante para volver al menú principal
+        // Botón flotante para regresar al menú principal
         fabVolver.setOnClickListener {
             finish()
         }
 
         btnNavegar.setOnClickListener {
+            btnNavegar.isEnabled = false // Desactiva el botón para evitar múltiples pulsaciones
+            tvEstado.text = "Iniciando cuenta atrás de 10 segundos..."
 
-            // 1. Crear el Intent para ir a Ejercicio2DestinoActivity
+            // 1. Prepara el Intent para navegar a la pantalla de destino
             val intent = Intent(this, Ejercicio2DestinoActivity::class.java)
 
-            // 2. Crear el PendingIntent que encapsula el Intent anterior
+            // 2. Crea el PendingIntent requerido por el enunciado
             val flags = PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
             val pendingIntent = PendingIntent.getActivity(this, 0, intent, flags)
 
-            // 3. Usar Handler con Looper principal para retrasar la ejecución 10 segundos (10000 ms)
+            // 3. Usa Handler con postDelayed a 10.000 ms (10 segundos)
             Handler(Looper.getMainLooper()).postDelayed({
                 try {
-                    // Lanzar la Activity usando el PendingIntent
+                    // Lanza la navegación mediante el PendingIntent
                     pendingIntent.send()
-                    finish() // Opcional: cierra la pantalla actual al cambiar
+                    finish()
                 } catch (e: PendingIntent.CanceledException) {
                     e.printStackTrace()
                 }
             }, 10000)
 
-            Toast.makeText(this, "Temporizador iniciado (10s)", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Redirigiendo en 10 segundos...", Toast.LENGTH_SHORT).show()
         }
     }
 }

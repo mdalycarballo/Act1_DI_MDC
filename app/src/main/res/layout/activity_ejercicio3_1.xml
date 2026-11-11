@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 3: LinearLayouts Anidados"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnPantalla1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ir a Pantalla 1 (Bandera Vertical)"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnPantalla2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ir a Pantalla 2 (Estructura Cuadrícula)"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnPantalla3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ir a Pantalla 3 (Bandera Mixta)" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Volver al menú"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+</RelativeLayout>

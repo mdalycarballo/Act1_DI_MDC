@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Act1_MDC">
 
-        <!-- Actividad Principal (Menú) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -20,8 +19,10 @@
             </intent-filter>
         </activity>
 
-        <!-- Declaración de la actividad del Ejercicio 1 -->
+        <!-- Actividades registradas -->
         <activity android:name=".Ejercicio1Activity" />
+        <activity android:name=".Ejercicio2Activity" />
+        <activity android:name=".Ejercicio2DestinoActivity" />
 
     </application>
 
