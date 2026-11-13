@@ -20,27 +20,22 @@ class Ejercicio1Activity : AppCompatActivity() {
         val btnAbrirUrl = findViewById<Button>(R.id.btnAbrirUrl)
         val fabVolver = findViewById<Button>(R.id.btnAtras)
 
-        // Acción para volver al menú principal
         fabVolver.setOnClickListener {
-            finish() // Cierra la actividad actual y regresa a MainActivity
+            finish()
         }
 
         btnAbrirUrl.setOnClickListener {
             var urlText = etUrl.text.toString().trim()
 
-            // Si el usuario no escribe el protocolo, lo añadimos
             if (urlText.isNotEmpty() && !urlText.startsWith("http://") && !urlText.startsWith("https://")) {
                 urlText = "https://$urlText.com"
             }
 
-            // Comprueba que no esté vacío y que sea una URL válida[cite: 1]
             if (urlText.isNotEmpty() && URLUtil.isValidUrl(urlText)) {
-                // Intent implícito para abrir el navegador del sistema[cite: 1]
                 val intentWeb = Intent(Intent.ACTION_VIEW, Uri.parse(urlText))
                 startActivity(intentWeb)
             } else {
-                // Notificación mediante Toast[cite: 1]
-                Toast.makeText(this, "Por favor, introduzca una URL válida", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Ponga una url valida", Toast.LENGTH_SHORT).show()
             }
         }
     }
