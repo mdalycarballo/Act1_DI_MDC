@@ -19,10 +19,27 @@
             </intent-filter>
         </activity>
 
-        <!-- Actividades registradas -->
+        <!-- Ejercicio 1 -->
         <activity android:name=".Ejercicio1Activity" />
-        <activity android:name=".Ejercicio2Activity" />
-        <activity android:name=".Ejercicio2DestinoActivity" />
+
+        <!-- Ejercicio 2 -->
+        <activity android:name=".Ejercicio2_1Activity" />
+        <activity android:name=".Ejercicio2_2Activity" />
+
+        <!-- Ejercicio 3 -->
+        <activity android:name=".Ejercicio3_1Activity" />
+        <activity android:name=".Ejercicio3_2Activity" />
+        <activity android:name=".Ejercicio3_3Activity" />
+        <activity android:name=".Ejercicio3_4Activity" />
+
+        <!-- Ejercicio 4 -->
+        <activity android:name=".Ejercicio4Activity" />
+
+        <!-- Ejercicio 5 -->
+        <activity android:name=".Ejercicio5Activity" />
+
+        <!-- Ejercicio 6 -->
+        <activity android:name=".Ejercicio6Activity" />
 
     </application>
 

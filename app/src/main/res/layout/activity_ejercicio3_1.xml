@@ -2,52 +2,69 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp">
+    android:layout_height="match_parent">
 
+    <!-- Contenedor horizontal de las 3 franjas a pantalla completa -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ejercicio 3: LinearLayouts Anidados"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+        <!-- Franja izquierda verde -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FF00" />
 
-        <Button
-            android:id="@+id/btnPantalla1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ir a Pantalla 1 (Bandera Vertical)"
-            android:layout_marginBottom="12dp" />
+        <!-- Franja central blanca más ancha con los 3 botones dentro -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <Button
-            android:id="@+id/btnPantalla2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ir a Pantalla 2 (Estructura Cuadrícula)"
-            android:layout_marginBottom="12dp" />
+            <Button
+                android:id="@+id/btnPantalla1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Pantalla 1" />
 
-        <Button
-            android:id="@+id/btnPantalla3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ir a Pantalla 3 (Bandera Mixta)" />
+            <Button
+                android:id="@+id/btnPantalla2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Pantalla 2" />
+
+            <Button
+                android:id="@+id/btnPantalla3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pantalla 3" />
+
+        </LinearLayout>
+
+        <!-- Franja derecha verde -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FF00" />
 
     </LinearLayout>
 
+    <!-- Botón flotante para volver al menú principal -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabVolver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
         android:contentDescription="Volver al menú"
         app:srcCompat="@android:drawable/ic_menu_revert" />
